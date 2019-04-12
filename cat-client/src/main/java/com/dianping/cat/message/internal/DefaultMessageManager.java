@@ -62,7 +62,7 @@ public class DefaultMessageManager extends ContainerHolder implements MessageMan
 	@Inject
 	private MessageIdFactory m_factory;
 
-	private ThreadLocal<Context> m_context = new ThreadLocal<Context>();
+	private ThreadLocal<Context> m_context = new InheritableThreadLocal<Context>();
 
 	private long m_throttleTimes;
 
